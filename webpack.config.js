@@ -6,13 +6,15 @@ module.exports = {
   mode: 'development',
   entry: {
     app: './src/index.tsx'
+  },  
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist'
   },
   plugins: [
-    // new CleanWebpackPlugin(['dist/*']) for < v2 versions of CleanWebpackPlugin
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Development',

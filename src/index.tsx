@@ -1,12 +1,11 @@
+import Test from './component/test';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Test from './component/test.jsx';
-import './index.css';
 
 //adding my imports
-import "./styles/index.scss";
+import App from './App';
 
 ReactDOM.render(
 	<React.Fragment>
-		<Test />
+		<App />
 	</React.Fragment>, document.getElementById('root'));
