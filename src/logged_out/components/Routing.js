@@ -10,7 +10,7 @@ function Routing(props) {
   const { blogPosts, selectBlog, selectHome } = props;
   return (
     <Switch>
-      {blogPosts.map((post) => (
+      {blogPosts && blogPosts.map((post) => (
         <PropsRoute
           path={post.url}
           component={BlogPost}
