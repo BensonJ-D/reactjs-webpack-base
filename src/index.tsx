@@ -1,4 +1,3 @@
-import Test from './component/test';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
