@@ -5,7 +5,7 @@ import * as serviceWorker from "./serviceWorker";
 function App() {
     return (
         <div>
-            Example
+            Test
         </div>
     );
 }
