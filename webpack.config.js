@@ -21,11 +21,7 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            title: 'Development',
-            template: "./src/index.html",
-            filename: "./index.html"
-        }),
+        new HtmlWebpackPlugin({template: "./src/index.html"}),
     ],
     output: {
         filename: '[name].bundle.js',
@@ -72,6 +68,5 @@ module.exports = {
             },
 
         ]
-    },
-    externals: ['child_process', 'fs']
+    }
 };
