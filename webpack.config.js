@@ -37,38 +37,10 @@ module.exports = {
                 use: ['babel-loader']
             },
             {
-                test: /\.html$/,
-                exclude: /node_modules/,
-                use: ['html-loader']
-            },
-            {
-                test: /\.css$/,
-                exclude: /node_modules/,
-                use: ['style-loader', 'css-loader']
-            },
-            {
-                test: /\.scss$/,
-                exclude: /node_modules/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
-            },
-            {
-                test: /\.(png|jpg|gif)$/,
-                exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 5000
-                        }
-                    }
-                ]
-            },
-            {
                 test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
                 use: ['ts-loader'],
-            },
-
+            }
         ]
     }
 };
