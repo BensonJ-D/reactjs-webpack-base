@@ -7,6 +7,6 @@ describe('<App/>', function () {
     it('should render child text', function () {
         const shallowWrapper = shallow(<App />);
 
-        expect(shallowWrapper.children().text()).to.eq("Test update 2");
+        expect(shallowWrapper.children().text()).to.eq("Test update");
     });
 });
