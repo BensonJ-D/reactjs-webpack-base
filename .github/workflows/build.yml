@@ -18,6 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - run: yarn add -g mocha
       - run: yarn install
 
       - name: Run tests
