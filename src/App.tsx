@@ -1,16 +1,53 @@
-import React, {useState} from "react";
+import React, {Suspense, Fragment, useState} from "react";
 import {Button, Input, MenuItem, Select} from "@mui/material";
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import {Link, Route, Router, Switch} from "react-router-dom";
+import { CssBaseline } from "@mui/material";
+import {createBrowserHistory} from "history";
+
+const history = createBrowserHistory();
 
 function App() {
     return (
+        <Router history={history}>
+            <div>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
+                </ul>
+
+                <CssBaseline />
+                <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    <Route path="/about">
+                        <About />
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
+    );
+}
+
+function Home() {
+    return (
         <div>
-            Test update
+            <h2>Home</h2>
         </div>
     );
 }
 
-Enzyme.configure({ adapter: new Adapter() });
+function About() {
+    return (
+        <div>
+            <h2>About</h2>
+        </div>
+    );
+}
+
 
 export default App;
