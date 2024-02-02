@@ -58,8 +58,5 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack",
     "lint": "eslint src/ --ext .ts,.tsx"
-  },
-  "pre-commit": [
-    "precommit"
-  ]
+  }
 }
